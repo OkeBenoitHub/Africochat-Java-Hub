@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="MainViewModel"
+            type="com.africochat.www.viewmodels.MainViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_app_color">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:paddingBottom="16dp"
+                tools:context=".ui.fragments.MainFragment">
+
+                <!-- Main header -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mainHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/lato_heavy"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/about_head_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/content_header_color"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Africochat icon logo -->
+                <ImageView
+                    android:id="@+id/icon_africochat"
+                    android:layout_width="145dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/no_content_description"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/africochat_512"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mainHeader" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/semiHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/icon_africochat">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/lato_medium"
+                        android:padding="8dp"
+                        android:text="@string/africochat_helps_you_head_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/darker_gray" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/aboutApp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/about_app1_text"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/about_content_color"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_chat_48"
+                    app:layout_constraintTop_toBottomOf="@id/semiHead" />
+
+                <View
+                    android:id="@+id/separator1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_separator_bg_color"
+                    app:layout_constraintTop_toBottomOf="@id/aboutApp1" />
+
+                <TextView
+                    android:id="@+id/aboutApp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/lato_medium"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/about_app2_text"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/about_content_color"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_call_48"
+                    app:layout_constraintTop_toBottomOf="@id/separator1" />
+
+                <View
+                    android:id="@+id/separator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_separator_bg_color"
+                    app:layout_constraintTop_toBottomOf="@id/aboutApp2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+        <!-- sign in button -->
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_round"
+            app:mrl_rippleColor="@color/colorPrimaryDark"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="20dp">
+
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> MainViewModel.onNavigateToSignInFragment()}"
+                android:background="@android:color/transparent"
+                android:text="@string/sign_in_button_text"
+                android:textAllCaps="false"
+                android:textColor="@color/button_text_colored"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

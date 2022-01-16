@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ChatsTabViewModel"
+            type="com.africochat.www.viewmodels.ChatsTabViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_app_color"
+        tools:context=".ui.fragments.ChatsTabFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- New message -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_new_shoe"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:contentDescription="@string/new_chat_content_description"
+            app:backgroundTint="@color/white"
+            app:elevation="4dp"
+            app:rippleColor="@color/colorPrimaryLight"
+            app:srcCompat="@drawable/ic_action_new_message"
+            app:tint="@color/color_tint_floating_action_button_icon" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

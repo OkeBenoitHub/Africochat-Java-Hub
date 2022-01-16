@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="MainViewModel"
+            type="com.africochat.www.viewmodels.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_app_color"
+        android:paddingStart="@dimen/layout_left_margin"
+        android:paddingLeft="@dimen/layout_left_margin"
+        android:paddingEnd="@dimen/layout_right_margin"
+        android:paddingRight="@dimen/layout_right_margin"
+        android:paddingBottom="16dp"
+        tools:context=".ui.fragments.MainFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Main header -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mainHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/lato_heavy"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/about_head_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/content_header_color"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Africochat icon logo -->
+                <ImageView
+                    android:id="@+id/icon_africochat"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/no_content_description"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/africochat_512" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/semiHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/lato_medium"
+                        android:padding="8dp"
+                        android:text="@string/africochat_helps_you_head_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/darker_gray" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/aboutAppBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="16dp"
+                        android:fontFamily="@font/lato_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/about_app1_text"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/about_content_color"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_chat_48" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_separator_bg_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="16dp"
+                        android:fontFamily="@font/lato_medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/about_app2_text"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/about_content_color"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@drawable/ic_call_48" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_separator_bg_color" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sign In box -->
+            <FrameLayout
+                android:id="@+id/signInLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:text="Sign in layout"
+                    tools:textSize="22sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

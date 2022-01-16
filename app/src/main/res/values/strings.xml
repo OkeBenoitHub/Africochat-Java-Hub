@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Africochat</string>
+    <string name="app_name_label">Africochat</string>
+    <string name="package_name_text" translatable="false">com.africochat.www</string>
+    <string name="No_internet_available_text">No internet connection!</string>
+    <string name="yesterday_text">Yesterday</string>
+    <string name="days_ago_text">days ago</string>
+    <string name="hours_ago_text">hours ago</string>
+    <string name="hour_ago_text">An hour ago</string>
+    <string name="minutes_ago_text">minutes ago</string>
+    <string name="minute_ago_text">A minute ago</string>
+    <string name="just_now_ago_text">Just now</string>
+    <string name="wifi_enabled_text">Wifi enabled</string>
+    <string name="mobile_data_enabled_text">Mobile data enabled</string>
+    <string name="about_head_text">Africogram Messaging App</string>
+    <string name="no_content_description" translatable="false">none</string>
+    <string name="about_app1_text">Send direct messages to your friends on Africogram.</string>
+    <string name="about_app2_text">Engage with them via voice call and video chat!</string>
+    <string name="share_app_menu_item_text">Share App</string>
+    <string name="app_play_store_link" translatable="false">https://play.google.com/store/apps/details?id=</string>
+    <string name="feedback_menu_item_text">Feedback</string>
+    <string name="report_issue_item_text">Report an issue</string>
+    <string name="share_app_item_text">Share app</string>
+    <string name="about_app_text">Africochat: Messaging App for Africogram.</string>
+    <string name="share_app_via_text">Share Africochat via:</string>
+    <string name="about_app_share_3">Click the link below to download the android app:</string>
+    <string name="send_feedback_via_text">Send feedback via</string>
+    <string name="send_report_via_text">Send report via</string>
+    <string name="give_us_feedback_text">Give us a feedback</string>
+    <string name="what_went_wrong_text">Tell us what went wrong!!</string>
+    <string name="choose_photo_from_text">Choose a photo from:</string>
+    <string name="africochat_helps_you_head_text">Africochat helps you:</string>
+    <string name="sign_in_to_africochat_header_text">Sign in to Africochat</string>
+    <string name="email_edit_text">Email</string>
+    <string name="password_edit_text">Password</string>
+    <string name="sign_in_button_text">Sign In</string>
+    <string name="semi_head_login_more_info">Enter your email and password\nfrom Africogram</string>
+    <string name="forgot_your_password_text">Forgot your password?</string>
+    <string name="sign_up_button_text">Africogram</string>
+    <string name="terms_of_service_menu_text">Terms of service</string>
+    <string name="privacy_menu_text">Privacy</string>
+    <string name="share_app_menu_text">Share App</string>
+    <string name="terms_page_link_text" translatable="false">https://www.africogram.com/about/terms</string>
+    <string name="privacy_page_link_text" translatable="false">https://www.africogram.com/about/privacy</string>
+    <string name="enter_user_email_error_text">Your email?</string>
+    <string name="invalid_email_format_error_text">Invalid email</string>
+    <string name="enter_user_password_error_text">Your password?</string>
+    <string name="no_internet_connection_text">No internet connection</string>
+    <string name="sign_in_fragment_label">Sign In</string>
+    <string name="email_not_found_for_user_error">This email does not exist in our system</string>
+    <string name="incorrect_password_error">Incorrect password</string>
+    <string name="account_disabled_text">Your account has been disabled</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="reset_password_title_text">Reset password</string>
+    <string name="reset_password_message_text">We sent you an email with a link \n to reset your password.</string>
+    <string name="chats_tab_fragment_title">Chats</string>
+    <string name="friends_tab_fragment_title">Friends</string>
+    <string name="calls_tab_fragment_title">Calls</string>
+    <string name="settings_menu_text">Settings</string>
+    <string name="sign_out_menu_text">Sign out</string>
+    <string name="settings_fragment_label">Settings</string>
+    <string name="new_chat_content_description">New message</string>
+</resources>
